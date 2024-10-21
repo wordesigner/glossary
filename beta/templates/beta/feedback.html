@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap_icons %}
+
+{% block app_css %}
+    <link rel="stylesheet" href="{% static 'beta/index.css' %}">
+{% endblock  %}
+
+{% block title %}
+    ثبت بازخورد
+{% endblock  %}
+
+{% block main %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-4"></div>
+            <div class="col-md-4 col-sm-4">
+                <form action="" method="POST" novalidate>
+                    {% csrf_token %}
+                    {{ feedform }}
+                    <button type="submit">ارسال</button>
+                </form>
+            </div>
+            <div class="col-md-4 col-sm-4"></div>
+        </div>
+    </div>
+{% endblock  %}

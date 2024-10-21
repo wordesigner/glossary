@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap_icons %}
+
+{% block app_css %}
+    <link rel="stylesheet" href="{% static 'beta/index.css' %}">
+{% endblock  %}
+
+{% block title %}
+    جستجوی واژه
+{% endblock  %}
+
+{% block main %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-4"></div>
+            <div class="col-md-4 col-sm-4 d-flex align-content-center justify-content-center">
+                <div class="cursor">
+                    <form class="rq-form-element" action="" method="POST" enctype="multipart/form-data" novalidate>
+                        {% csrf_token %}
+                        {{ form }}
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-4"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-sm-4"></div>
+            <div class="col-md-4 col-sm-4">
+                {% if word %}
+                    {% if def %}
+                        <p class="def">{{ def }}</p>
+                        <a href="{% url 'feedback' %}">
+                            <button class="btn-danger" type="button">ثبت بازخورد</button>
+                        </a>
+                    {% else %}
+                        <h4>not found</h4>
+                    {% endif %}        
+                {% endif %}
+            </div>
+            <div class="col-md-4 col-sm-4"></div>
+        </div>
+    </div>
+{% endblock  %}
+
+

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap_icons %}
+
+{% block app_css %}
+    <link rel="stylesheet" href="{% static 'beta/index.css' %}">
+{% endblock  %}
+
+{% block title %}
+    گزارش فیدبک
+{% endblock  %}
+
+{% block main %}
+
+{% for field in reports %}
+<p>{{ field.related_word }}  |||    ||| {{ field.feedstored }}</p>
+{% endfor %}
+
+{% endblock  %}
+

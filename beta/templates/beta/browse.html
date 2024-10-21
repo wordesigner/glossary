@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap_icons %}
+
+{% block app_css %}
+    <link rel="stylesheet" href="{% static 'beta/index.css' %}">
+{% endblock  %}
+
+{% block title %}
+    همه واژه‌ها
+{% endblock  %}
+
+{% block main %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-sm-4"></div>
+        <div class="col-md-4 col-sm-4">
+            {% for entry in entries %}
+            <div class="card mb-4">
+                <div class="card-header">{{ entry.word }}</div>
+                <div class="card-text">{{ entry.definition }}</div>
+            </div>
+            {% endfor %}
+            <a href="{% url 'commentt' %}">
+                <button class="btn-danger" type="button">ثبت بازخورد</button>
+            </a>
+        </div>
+        <div class="col-md-4 col-sm-4"></div>
+    </div>
+    </div>
+
+{% endblock %}
+
+<!--<a href="{# {% url 'feedback' %} #}">
+    <button class="btn-danger" type="button">ثبت بازخورد</button>
+</a>-->
