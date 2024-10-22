@@ -69,12 +69,12 @@ entry = [
     ('deadhead', 'deadhead'),
     ('empty mile', 'empty mile'),
 
-    ('drop and hook', 'backhaul'),
-    ('unloading point', 'tl market'),
-    ('shipment', 'dat'),
-    ('carrier', 'equipment'),
-    ('shipper', 'load planner'),
-    ('loading', 'tendering'),
+    ('drop and hook', 'drop and hook'),
+    ('unloading point', 'unloading point'),
+    ('shipment', 'shipment'),
+    ('carrier', 'carrier'),
+    ('shipper', 'shipper'),
+    ('loading', 'loading'),
     
 ]
 
