@@ -79,12 +79,12 @@ entry = [
 ]
 
 class MainForm(forms.Form):
-    query = forms.CharField(label=False, max_length=50, widget=forms.TextInput(attrs={'placeholder': 'Freight Quote'}), error_messages={
+    query = forms.CharField(label=False, max_length=50, widget=forms.TextInput(attrs={'placeholder': 'اینجا جستجو کنید...'}), error_messages={
         'required': 'واژه مورد نظر را وارد کنید'
     })
     
 class FeedForm(forms.Form):
-    feedbox = forms.CharField(label='معنی پیشنهادی‌تان را بنویسید', max_length=100, widget=forms.Textarea)
+    feedbox = forms.CharField(label='معنی پیشنهادی‌تان را بنویسید', max_length=80, widget=forms.Textarea)
 
 class WordSel(forms.Form):
     wordchoice = forms.CharField(label='واژه انتخابی', widget=forms.Select(choices=entry, attrs={'id': 'word-select'}))
