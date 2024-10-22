@@ -12,35 +12,26 @@ input {
     line-height: inherit;
     margin-top: 60px;
     /* border-radius: 0px; */
-    border-bottom-color: orange;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom-width: 2px;
+    border-color: orange;
+    border-top: solid 1px orange;
+    border-left: solid 1px orange;
+    border-right: solid 1px orange;
+    /* border-bottom-width: 2px; */
+    border-radius: 6px;
     outline: none;
+    width: 220px;
+    padding-top: 5px;
+    padding: 5px;
 }
 
-.cursor {
-	position: relative;
-}
-.cursor	i {
-	position: absolute;
-	width: 1px;
-	height: 80%;
-	background-color: gray;
-	left: 5px;
-	top: 10%;
-	animation-name: blink;
-	animation-duration: 800ms;
-	animation-iteration-count: infinite;
-	opacity: 1;
+.col-md-4, col-sm-4 {
+    padding-right: 0px;
+    padding-left: 0px;
 }
 
-.cursor input:focus + i {
-	display: none;
+.feedback-btn {
+    padding: 10px;
+    width: 100%;
 }
 
-@keyframes blink {
-	from { opacity: 1; }
-	to { opacity: 0; }
-}
+

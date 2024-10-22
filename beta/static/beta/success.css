@@ -1,0 +1,15 @@
+.success-msg {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+.feedback-btn {
+    padding: 10px;
+    width: 100%;
+}
+
+.col-md-4, col-sm-4 {
+    padding-right: 0px;
+    padding-left: 0px;
+}
