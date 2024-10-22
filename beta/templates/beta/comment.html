@@ -25,4 +25,25 @@
             <div class="col-md-4 col-sm-4"></div>
         </div>
     </div>
+
+    <script type="text/javascript">
+        function filterDropdown() {
+            var input, filter, select, options, i;
+            input = document.getElementById("food-search");  // The search input
+            filter = input.value.toLowerCase();  // Convert the input value to lowercase
+            select = document.getElementById("food-select");  // The select element
+            options = select.getElementsByTagName("option");  // The list of options in the select
+    
+            // Loop through all options and hide those that don't match the search query
+            for (i = 0; i < options.length; i++) {
+                var txtValue = options[i].textContent || options[i].innerText;
+                if (txtValue.toLowerCase().indexOf(filter) > -1) {
+                    options[i].style.display = "";  // Show the option if it matches the search
+                } else {
+                    options[i].style.display = "none";  // Hide the option if it doesn't match
+                }
+            }
+        }
+    </script>
+
 {% endblock %}
