@@ -7,7 +7,7 @@ class MainData(models.Model):
     definition = models.TextField()
 
     def __str__(self):
-        return self.word, self.definition
+        return self.word
 
 class FeedData(models.Model):
     related_word = models.CharField(max_length=30, default='')
