@@ -3,7 +3,7 @@
 {% load bootstrap_icons %}
 
 {% block app_css %}
-    <link rel="stylesheet" href="{% static 'beta/index.css' %}">
+    <link rel="stylesheet" href="{% static 'beta/success.css' %}">
 {% endblock  %}
 
 {% block title %}
@@ -15,9 +15,12 @@
         <div class="row">
             <div class="col-md-4 col-sm-4"></div>
             <div class="col-md-4 col-sm-4">
-                <p class="display-5">بازخوردت ثبت شد، متشکرم</p>
+                <p class="success-msg mb-5">بازخوردت ثبت شد، متشکرم</p>
+                <a href="{% url 'browse' %}">
+                    <button class="btn-danger feedback-btn" type="button">بازگشت به فهرست واژه‌ها</button>
+                </a>
             </div>
             <div class="col-md-4 col-sm-4"></div>
         </div>
     </div>
-{% endblock  %}
+{% endblock %}
